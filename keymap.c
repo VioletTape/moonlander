@@ -433,7 +433,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     TG_RED,  _______, _______, _______, _______, _______, _______,
     CT_G,    KC_HOME, KC_PGDN, KC_PGUP, KC_END,  _______, _______,
     _______, KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT, _______, _______,
-    _______, CT_LEFT, CT_UP,   CT_DOWN, CT_UP,   _______, 
+    _______, CT_LEFT, CT_UP,   CT_DOWN, CT_RGHT, _______, 
     _______, _______, _______, _______, TT_CYAN,
     _______, // LEFT RED THUMB KEY
     _______, _______, _______, // LEFT THUMB KEYS
