@@ -487,7 +487,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              AC_CRCL, AG_9,    AG_8,    AG_7,    _______, _______,
                       TT_CYAN, WN_LEFT, WN_DOWN, WN_UP,  WN_RIGHT,
                       _______, // RIGHT RED THUMB KEY
-                      _______, _______, _______ // RIGHT THUMB KEYS
+                      _______, _______, KC_LALT // RIGHT THUMB KEYS
   ),
 
   //---------------------------------------------------------------------------
