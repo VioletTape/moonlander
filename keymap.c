@@ -443,7 +443,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, CMB_LB2, CMB_RB2, EN_ARR2, AS_AS  ,  CT_ENT,
     _______, KC_TAB , CMB_LB1, CMB_RB1, CMB_LB4, CMB_RB4, SH_TAB ,
              _______, CMB_LB3, CMB_RB3, EN_LTEQ, EN_GTEQ, EN_CLTG,
-                      _______, _______, _______, _______, _______,
+                      _______, KC_LALT, KC_LGUI, _______, _______,
                       _______, // RIGHT RED THUMB KEY
                       _______, _______, _______ // RIGHT THUMB KEYS
     ),
