@@ -63,6 +63,7 @@ LAYOUT_moonlander( \
 #define CS_W LCTL(S(KC_W)) // shrink selection
 #define CS_V LCTL(S(KC_V)) // paste history
 #define CS_F LCTL(S(KC_F)) // global search
+#define CS_N LCTL(S(KC_N)) // class search
 
 // Alt keys
 #define AL_UP LALT(KC_UP)
@@ -77,6 +78,7 @@ LAYOUT_moonlander( \
 // Alt + Shift
 #define AS_Q LALT(S(KC_Q)) // close but
 #define AS_A LALT(S(KC_A)) // close all
+#define AS_AS LALT(KC_LSHIFT)
 
 
 // Alt + Ctrl
@@ -94,6 +96,7 @@ LAYOUT_moonlander( \
 #define WN_D LGUI(KC_D)
 #define WN_E LGUI(KC_E)
 #define WN_V LGUI(KC_V)
+#define WN_SCRN LGUI(S(KC_S))
 
 #define WN_EM LGUI(KC_SCOLON)
 #define WN_AR LGUI(CT_RGHT)
@@ -131,6 +134,7 @@ LAYOUT_moonlander( \
 #define CT_E LCTL(KC_E)
 #define CT_V LCTL(KC_V)
 #define CT_P LCTL(KC_P)
+#define CT_B LCTL(KC_B)
 #define CT_MINS LCTL(KC_MINS)
 #define CT_BSLS LCTL(KC_BSLS)
 #define CT_SPC LCTL(KC_SPC)
@@ -415,9 +419,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // RIGHT HALF
     _______, _______, _______, _______, _______, _______, _______,
-    _______, RU_Z,   RU_V,    RU_K,    RU_D,    RU_SH,  _______,
-    _______, RU_L,   RU_N,    RU_T,    RU_S,    RU_R,   RU_J,
-             RU_B,   RU_M,    RU_P,    RU_G,    RU_ZH,  RU_CH,
+    _______, RU_Z,   RU_V,    RU_K,    RU_D,    RU_SH,    _______,
+    _______, RU_L,   RU_N,    RU_T,    RU_S,    RU_R,     RU_J,
+             RU_B,   RU_M,    RU_P,    RU_G,    RU_ZH,    RU_CH,
                       _______, _______, _______, _______, _______,
                       _______, // RIGHT RED THUMB KEY
                       _______, _______, _______ // RIGHT THUMB KEYS
@@ -427,17 +431,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [L_RED] = MY_layout(
     // LEFT HALF
     TG_RED,  _______, _______, _______, _______, _______, _______,
-    CT_G,    KC_HOME, KC_PGDN, KC_PGUP, KC_END,  _______,    _______,
-    _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, CT_MINS,    _______,
-    _______, CT_LEFT, CT_DOWN, CT_UP,   CT_RGHT, _______,
+    CT_G,    KC_HOME, KC_PGDN, KC_PGUP, KC_END,  _______, _______,
+    _______, KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT, _______, _______,
+    _______, CT_LEFT, CT_UP,   CT_DOWN, CT_UP,   _______, 
     _______, _______, _______, _______, TT_CYAN,
     _______, // LEFT RED THUMB KEY
     _______, _______, _______, // LEFT THUMB KEYS
 
     // RIGHT HALF
     _______, _______, _______, _______, _______, _______, _______,
-    _______, _______, CMB_LB2, CMB_RB2, EN_ARR2, _______, CT_ENT,
-    _______, KC_TAB,  CMB_LB1, CMB_RB1, CMB_LB4, CMB_RB4, SH_TAB,
+    _______, _______, CMB_LB2, CMB_RB2, EN_ARR2, AS_AS  ,  CT_ENT,
+    _______, KC_TAB , CMB_LB1, CMB_RB1, CMB_LB4, CMB_RB4, SH_TAB ,
              _______, CMB_LB3, CMB_RB3, EN_LTEQ, EN_GTEQ, EN_CLTG,
                       _______, _______, _______, _______, _______,
                       _______, // RIGHT RED THUMB KEY
@@ -468,10 +472,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //---------------------------------------------------------------------------
   [L_VIOL] = MY_layout(
     // LEFT HALF
-    TG_VIOL, _______, KC_F2,      CT_F6,   _______, KC_F9,   _______,
-    AS_A,    CT_E,    CT_MINS,    AL_F7,   CT_D,    AG_CLPS, _______,
-    AS_Q,    _______, _______,    CS_I,    CT_L,    CS_F, _______,
-    CS_S,    _______, _______, _______, _______,    CT_F12,
+    TG_VIOL, _______, KC_F2,   CT_F6,   _______, KC_F9,   _______,
+    AS_A,    CT_E,    CT_MINS, AL_F7,   CT_L,    AG_CLPS, _______,
+    AS_Q,    _______, CS_N,    CS_I,    CT_D,    CT_F12, _______,
+    CS_S,    _______, CT_G,    CT_B, _______,    CS_F,
     _______, _______, _______, _______, _______,
     _______, // LEFT RED THUMB KEY
     _______, _______, _______, // LEFT THUMB KEYS
