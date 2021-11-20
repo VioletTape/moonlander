@@ -483,7 +483,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // RIGHT HALF
     CS_ESC,  WN_X,    WN_D,    WN_EM,   WN_E,    WN_V,    AL_INS,
     WN_TAB, _______,  AG_4,    AG_5,    AG_6,    _______, AL_ENT,
-    WN_AL,   WN_AR,   AG_0,    AG_1,    AG_2,    AG_3,    _______,
+    WN_AL,   WN_AR,   AG_0,    AG_1,    AG_2,    AG_3,    CT_SPC,
              AC_CRCL, AG_9,    AG_8,    AG_7,    _______, _______,
                       TT_CYAN, WN_LEFT, WN_DOWN, WN_UP,  WN_RIGHT,
                       _______, // RIGHT RED THUMB KEY
