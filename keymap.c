@@ -52,6 +52,7 @@ LAYOUT_moonlander( \
 #define SH_TAB S(KC_TAB)
 
 // Ctrl+Shift keys
+#define CS_AS LCTL(KC_LSHIFT)
 #define CS_T LCTL(S(KC_T))
 #define CS_ESC LCTL(S(KC_ESC))
 #define CS_K LCTL(S(KC_K))
@@ -440,10 +441,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // RIGHT HALF
     _______, _______, _______, _______, _______, _______, _______,
-    _______, _______, CMB_LB2, CMB_RB2, EN_ARR2, AS_AS  ,  CT_ENT,
+    _______, _______, CMB_LB2, CMB_RB2, EN_ARR2, _______,  CT_ENT,
     _______, KC_TAB , CMB_LB1, CMB_RB1, CMB_LB4, CMB_RB4, SH_TAB ,
              _______, CMB_LB3, CMB_RB3, EN_LTEQ, EN_GTEQ, EN_CLTG,
-                      _______, KC_LALT, KC_LGUI, _______, _______,
+                      _______, AS_AS,   KC_LGUI, _______, _______,
                       _______, // RIGHT RED THUMB KEY
                       _______, _______, _______ // RIGHT THUMB KEYS
     ),
@@ -460,9 +461,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, // LEFT THUMB KEYS
 
     // RIGHT HALF
-    _______, _______, _______, _______, _______, _______, RESET,
-    _______, _______, KC_F4,   KC_F5,   KC_F6,   KC_F11,  _______,
-    _______, _______, KC_F10,  KC_F1,   KC_F2,   KC_F3,   _______,
+    KC_F5, _______, _______, _______, _______, _______, RESET,
+    KC_F11, _______, KC_F4,   KC_F5,   KC_F6,   KC_F11,  _______,
+    KC_F10, _______, KC_F10,  KC_F1,   KC_F2,   KC_F3,   _______,
              _______, KC_F9,   KC_F8,   KC_F7,   KC_F12,  _______,
                       _______, _______, _______, _______, _______,
                       _______, // RIGHT RED THUMB KEY
@@ -691,7 +692,7 @@ const ComboWithKeycode combos[] PROGMEM = {
   CHORD(AG_RPRN, /* <- */ CMB_RB1),
   CHORD(EN_LBRC, /* <- */ CMB_LB2),
   CHORD(EN_RBRC, /* <- */ CMB_RB2),
-  CHORD(EN_LCBR, /* <- */ CMB_LB3),
+  CHORD(EN_ARR2, /* <- */ CMB_LB3),
   CHORD(EN_RCBR, /* <- */ CMB_RB3),
   CHORD(EN_LT,   /* <- */ CMB_LB4),
   CHORD(EN_GT,   /* <- */ CMB_RB4),
