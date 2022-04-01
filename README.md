@@ -78,6 +78,10 @@
 
 
 <!-- ABOUT THE PROJECT -->
+
+cd zsa_qmk
+make moonlander:violettape
+
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://www.zsa.io/static/fce10e1a2b0b57f29834f3d0de76e737/d9841/1-hero-white.webp)
