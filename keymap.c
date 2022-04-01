@@ -291,7 +291,7 @@ enum Layers {
     AG_UNDS, LU1,     LU2,     LU3,     LU4,     LU5,     CMB_CTC, \
     SFT_N_O, LH1,     LH2,     LH3,     LH4,     LH5,     CMB_CTV, \
     LD0,     LD1,     LD2,     LD3,     LD4,     LD5, \
-    CMB_SFT,  TT_YELW, TT_DIC, CMB_LYG, CMB_LYV, \
+    KC_LSHIFT,  TT_YELW, TT_DIC, CMB_LYG, CMB_LYV, \
     \
     CMB_CTL, /* LEFT RED THUMB KEY */ \
     CMB_SPC, CMB_BSP, CMB_ENT, /* LEFT THUMB KEYS */ \
@@ -692,7 +692,7 @@ const ComboWithKeycode combos[] PROGMEM = {
   CHORD(AG_RPRN, /* <- */ CMB_RB1),
   CHORD(EN_LBRC, /* <- */ CMB_LB2),
   CHORD(EN_RBRC, /* <- */ CMB_RB2),
-  CHORD(EN_ARR2, /* <- */ CMB_LB3),
+  CHORD(EN_LCBR, /* <- */ CMB_LB3),
   CHORD(EN_RCBR, /* <- */ CMB_RB3),
   CHORD(EN_LT,   /* <- */ CMB_LB4),
   CHORD(EN_GT,   /* <- */ CMB_RB4),
