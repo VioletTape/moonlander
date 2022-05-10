@@ -442,7 +442,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, CT_LEFT, CT_UP,   CT_DOWN, CT_RGHT, _______, 
     _______, _______, _______, _______, TT_CYAN,
     _______, // LEFT RED THUMB KEY
-    CMB_ALT, _______, _______, // LEFT THUMB KEYS
+    KC_LALT, _______, _______, // LEFT THUMB KEYS
 
     // RIGHT HALF
     _______, _______, _______, _______, _______, _______, _______,
@@ -481,7 +481,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     TG_VIOL, _______, KC_F2,   CT_F6,   _______, KC_F9,   _______,
     AS_A,    CT_E,    CT_MINS, AL_F7,   CT_L,    AG_CLPS, _______,
     AS_Q,    _______, CS_N,    CS_I,    CT_D,    CT_F12, _______,
-    CS_S,    _______, CT_G,    CT_B, _______,    CS_F,
+    CS_S,    CAS_F,   CT_G,    CT_B, _______,    CS_F,
     _______, _______, _______, _______, _______,
     _______, // LEFT RED THUMB KEY
     _______, _______, _______, // LEFT THUMB KEYS
@@ -493,7 +493,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              AC_CRCL, AG_9,    AG_8,    AG_7,    _______, _______,
                       TT_CYAN, WN_LEFT, WN_DOWN, WN_UP,  WN_RIGHT,
                       _______, // RIGHT RED THUMB KEY
-                      _______, _______, KC_LALT // RIGHT THUMB KEYS
+                      _______, _______, _______ // RIGHT THUMB KEYS
   ),
 
   //---------------------------------------------------------------------------
