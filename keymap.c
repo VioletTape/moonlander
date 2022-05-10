@@ -86,6 +86,11 @@ LAYOUT_moonlander( \
 #define AC_V LALT(LCTL(KC_V))
 #define AC_D LALT(LCTL(KC_D))
 #define AC_P LALT(LCTL(KC_P))
+#define AC_F LALT(LCTL(KC_F))
+
+// Ctrl + alt + shift
+#define CAS_F S(AC_F)
+
 
 // Gui keys
 #define WN_F1 LGUI(KC_F1)
@@ -437,7 +442,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, CT_LEFT, CT_UP,   CT_DOWN, CT_RGHT, _______, 
     _______, _______, _______, _______, TT_CYAN,
     _______, // LEFT RED THUMB KEY
-    _______, _______, _______, // LEFT THUMB KEYS
+    CMB_ALT, _______, _______, // LEFT THUMB KEYS
 
     // RIGHT HALF
     _______, _______, _______, _______, _______, _______, _______,
