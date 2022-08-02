@@ -482,7 +482,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     TG_VIOL, _______, KC_F2,   CT_F6,   _______, KC_F9,   _______,
     AS_A,    CT_E,    CT_MINS, AL_F7,   CT_L,    AG_CLPS, _______,
     AS_Q,    _______, CS_N,    CS_I,    CT_D,    CT_F12, _______,
-    CS_S,    CAS_F,   CT_G,    CT_B, _______,    CS_F,
+    CS_S,    CAS_F,   CT_G,    CT_B,    CT_W,    CS_F,
     _______, _______, _______, _______, _______,
     _______, // LEFT RED THUMB KEY
     _______, _______, _______, // LEFT THUMB KEYS
