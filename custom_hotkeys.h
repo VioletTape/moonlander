@@ -42,8 +42,8 @@ bool process_my_hotkeys(uint16_t keycode, keyrecord_t *record) {
       break;
     case F6_CT_C:
       if (record->event.pressed) {
-        register_code(KC_F6);
-        unregister_code(KC_F6);
+        register_code(KC_F4);
+        unregister_code(KC_F4);
 
         register_code(KC_LCTL);
           register_code(KC_C);

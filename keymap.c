@@ -141,6 +141,7 @@ LAYOUT_moonlander( \
 #define CT_V LCTL(KC_V)
 #define CT_P LCTL(KC_P)
 #define CT_B LCTL(KC_B)
+#define CT_I LCTL(KC_I)
 #define CT_MINS LCTL(KC_MINS)
 #define CT_BSLS LCTL(KC_BSLS)
 #define CT_SPC LCTL(KC_SPC)
@@ -446,7 +447,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // RIGHT HALF
     _______, _______, _______, _______, _______, _______, _______,
-    _______, _______, CMB_LB2, CMB_RB2, EN_ARR2, _______,  CT_ENT,
+    _______, _______, CMB_LB2, CMB_RB2, EN_ARR2, KC_LSHIFT,  CT_ENT,
     _______, KC_TAB , CMB_LB1, CMB_RB1, CMB_LB4, CMB_RB4, SH_TAB ,
              _______, CMB_LB3, CMB_RB3, EN_LTEQ, EN_GTEQ, EN_CLTG,
                       _______, AS_AS,   CS_AS,   _______, _______,
@@ -460,7 +461,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     TG_GREN, _______, _______, _______, _______,  _______,  _______,
     KC_MUTE, KC_F5,   CS_T,    CT_T,    CT_W,     F6_CT_C,  _______,
     KC_VOLU, KC_MPRV, KC_MNXT, CT_PGUP, CT_PGDN,  KC_MPLY,  _______,
-    KC_VOLD, CT_F5,   CS_P,    _______, _______,  AL_PSCR,
+    KC_VOLD, CT_F5,   _______, CT_I,    CT_B,     AL_PSCR,
     _______, _______, _______, _______, _______,
     _______, // LEFT RED THUMB KEY
     _______, _______, _______, // LEFT THUMB KEYS
@@ -619,7 +620,7 @@ const ComboWithKeycode combos[] PROGMEM = {
   CHORD(KC_ENT,  /* <- */ CMB_ENT),
   IMMEDIATE_CHORD(CTRL_EN, CTRL_EN, /* <-! */ CMB_CTL),
   CHORD(CT_A,    /* <- */ CMB_SPC, CMB_CTL),
-  IMMEDIATE_CHORD(TT_GRAY, TT_UNDO, /* <-! */ CMB_SPC, CMB_BSP),
+  IMMEDIATE_CHORD(TT_GRAY, TT_UNDO, /* <-! */ CMB_DOT, CMB_SFT),
   CHORD(KC_DEL,  /* <- */ CMB_BSP, CMB_CTL),
   CHORD(CT_BSPC, /* <- */ CMB_BSP, CMB_ENT),
   CHORD(CTSH_EN, /* <- */ CMB_SPC, CMB_BSP, CMB_CTL),
