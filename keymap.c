@@ -50,6 +50,7 @@ LAYOUT_moonlander( \
 
 // Shift keys
 #define SH_TAB S(KC_TAB)
+#define SH_F12 S(KC_F12)
 
 // Ctrl+Shift keys
 #define CS_AS LCTL(KC_LSHIFT)
@@ -65,6 +66,8 @@ LAYOUT_moonlander( \
 #define CS_V LCTL(S(KC_V)) // paste history
 #define CS_F LCTL(S(KC_F)) // global search
 #define CS_N LCTL(S(KC_N)) // class search
+#define CS_E LCTL(S(KC_E)) // del to start camel
+#define CS_Y LCTL(S(KC_Y)) // del to end camel
 
 // Alt keys
 #define AL_UP LALT(KC_UP)
@@ -74,6 +77,7 @@ LAYOUT_moonlander( \
 #define AL_PSCR LALT(KC_PSCR)
 #define AL_ENT LALT(KC_ENT)
 #define AL_F7 LALT(KC_F7)
+#define AL_F5 LALT(KC_F5)
 #define AL_INS LALT(KC_INS)
 
 // Alt + Shift
@@ -90,6 +94,7 @@ LAYOUT_moonlander( \
 
 // Ctrl + alt + shift
 #define CAS_F S(AC_F)
+#define CAS_F9 S(KC_F9)
 
 
 // Gui keys
@@ -122,6 +127,7 @@ LAYOUT_moonlander( \
 #define CT_RGHT LCTL(KC_RGHT)
 #define CT_ENT LCTL(KC_ENT)
 #define CT_BSPC LCTL(KC_BSPC)
+#define CT_DEL LCTL(KC_DEL)
 #define CT_T LCTL(KC_T)
 #define CT_W LCTL(KC_W)
 #define CT_J LCTL(KC_J)
@@ -145,6 +151,8 @@ LAYOUT_moonlander( \
 #define CT_MINS LCTL(KC_MINS)
 #define CT_BSLS LCTL(KC_BSLS)
 #define CT_SPC LCTL(KC_SPC)
+#define CT_RBR LCTL(KC_RBRC)
+#define CT_LBR LCTL(KC_LBRC)
 
 #define RGB_LYR TOGGLE_LAYER_COLOR
 
@@ -222,14 +230,14 @@ enum Layers {
   L_RU,
   L_RU_S,
 
-  L_RED,
-  L_GREN,
-  L_VIOL,
-  L_GRAY,
-  L_CYAN,
+  L_RED,  // navigator
+  L_GREN,  // browser + F
+  L_VIOL, // dev 1
+  L_GRAY, // mouse
+  L_CYAN,  // dev 2
   L_YELW,
 
-  L_GAME,
+  L_GAME, // pink
   L_NUCL,
 
   L_DIC,
@@ -307,7 +315,7 @@ enum Layers {
     CMB_LB3,    RU1,     RU2,     RU3,     RU4,     RU5,     AG_MINS, \
     CMB_LB1,    RH1,     RH2,     RH3,     RH4,     RH5,     RH6, \
              RD1,     RD2,     RD3,     RD4,     RD5,     RD6, \
-                      TT_RED,  XXXXXXX, XXXXXXX, TT_GAME, TT_NUCL, \
+                      TT_RED,  TT_CYAN, XXXXXXX, TT_GAME, TT_NUCL, \
                       \
                       CMB_ALT, /* RIGHT RED THUMB KEY */ \
                       CMB_LAN, CMB_DOT, CMB_SFT /* RIGHT THUMB KEYS */ \
@@ -443,7 +451,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, CT_LEFT, CT_UP,   CT_DOWN, CT_RGHT, _______, 
     _______, _______, _______, _______, TT_CYAN,
     _______, // LEFT RED THUMB KEY
-    KC_LALT, _______, _______, // LEFT THUMB KEYS
+    KC_LALT, KC_LCTL, _______, // LEFT THUMB KEYS
 
     // RIGHT HALF
     _______, _______, _______, _______, _______, _______, _______,
@@ -459,7 +467,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [L_GREN] = MY_layout(
     // LEFT HALF
     TG_GREN, _______, _______, _______, _______,  _______,  _______,
-    KC_MUTE, KC_F5,   CS_T,    CT_T,    CT_W,     F6_CT_C,  _______,
+    KC_MUTE, KC_F5,   CS_T,    CT_T,    CT_W,     _______,  _______,
     KC_VOLU, KC_MPRV, KC_MNXT, CT_PGUP, CT_PGDN,  KC_MPLY,  _______,
     KC_VOLD, CT_F5,   _______, CT_I,    CT_B,     AL_PSCR,
     _______, _______, _______, _______, _______,
@@ -481,7 +489,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // LEFT HALF
     TG_VIOL, _______, KC_F2,   CT_F6,   _______, KC_F9,   _______,
     AS_A,    CT_E,    CT_MINS, AL_F7,   CT_L,    AG_CLPS, _______,
-    AS_Q,    _______, CS_N,    CS_I,    CT_D,    CT_F12, _______,
+    AS_Q,    CS_V,    CS_N,    CS_I,    CT_D,    CT_F12,  _______,
     CS_S,    CAS_F,   CT_G,    CT_B,    CT_W,    CS_F,
     _______, _______, _______, _______, _______,
     _______, // LEFT RED THUMB KEY
@@ -521,19 +529,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //---------------------------------------------------------------------------
   [L_CYAN] = MY_layout(
     // LEFT HALF
-    TG_CYAN, _______, _______, _______, _______, _______,  _______,
-    XC_NIN,  XC_IN,   XC_SBST, XC_DEGR, XC_PLMN, XC_MU,    _______,
-    XC_MUSC, XC_LEFT, XC_DOWN, XC_UP,   XC_RGHT, XC_LMBD,  _______,
-    XC_ANGL, XC_IFAI, XC_EXST, XC_ALL,  XC_THEN, XC_PI,
-    _______, _______, _______, _______, _______,
+    TG_CYAN,  _______, _______, _______,      _______,   _______,  AL_F5,
+    B_PREV,   R_INT,   _______, TEST_SESSION, TEST_LAST, _______,  KC_F9,
+    B_NEXT,   R_PU,    _______, TEST_DEBUG,   CT_RBR,    CT_LBR,   CAS_F9,
+    B_TOGGLE, _______, _______, TEST_ALL,     CS_V,      SPLIT,
+    _______,  _______, _______, _______,      _______,
     _______, // LEFT RED THUMB KEY
     _______, _______, _______, // LEFT THUMB KEYS
 
     // RIGHT HALF
     _______, _______, _______, _______, _______, _______, _______,
-    _______, XC_CRSS, CMB_LCR, CMB_RCR, XC_APRX, XC_EMPT, XC_TM,
-    _______, XC_DONE, CMB_LTR, CMB_RTR, XC_DASH, XC_TIMS, XC_NEQ,
-             XC_SPRK, XC_TMBU, XC_TMBD, XC_BULL, XC_INF, XC_COPY,
+    _______, _______, _______, _______, _______, _______, KC_F12,
+    _______, _______, _______, CT_BSPC, CT_DEL,  _______, SH_F12,
+             _______, _______, CS_E,    CS_Y,    _______, _______,
                       _______, _______, _______, _______, _______,
                       _______, // RIGHT RED THUMB KEY
                       _______, _______, _______ // RIGHT THUMB KEYS

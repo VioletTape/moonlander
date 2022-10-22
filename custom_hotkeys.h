@@ -8,7 +8,6 @@ enum custom_hotkeys_keycodes {
   CUSTOM_HOTKEYS_START = CUSTOM_SAFE_RANGE,
 
   KG_NEXT,
-  F6_CT_C,
   MY_SCRN,
   CT_A_C,
   CT_A_V,
@@ -18,6 +17,17 @@ enum custom_hotkeys_keycodes {
   CT_Y,
   CT_Z,
   AR_L5,
+  TEST_LAST,
+  TEST_ALL,
+  TEST_DEBUG,
+  TEST_SESSION,
+  B_TOGGLE,
+  B_PREV,
+  B_NEXT,
+  R_PU,
+  R_INT,
+  SPLIT,
+  
 
   CUSTOM_HOTKEYS_NEW_SAFE_RANGE,
   #undef CUSTOM_SAFE_RANGE
@@ -27,6 +37,140 @@ enum custom_hotkeys_keycodes {
 // Мои языко-символьные клавиши
 bool process_my_hotkeys(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
+  case R_PU:
+    if (record->event.pressed) {
+      register_code(KC_LALT);
+      register_code(KC_LSFT);
+      register_code(KC_R);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LSFT);
+      unregister_code(KC_R);
+      register_code(KC_U);
+      unregister_code(KC_U);
+    }
+    return false;
+    break;
+
+  case R_INT:
+    if (record->event.pressed) {
+      register_code(KC_LALT);
+      register_code(KC_LSFT);
+      register_code(KC_R);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LSFT);
+      unregister_code(KC_R);
+      register_code(KC_I);
+      unregister_code(KC_I);
+    }
+    return false;
+    break;
+
+  case SPLIT:
+    if (record->event.pressed) {
+      register_code(KC_LALT);
+      register_code(KC_LSFT);
+      register_code(KC_R);
+      unregister_code(KC_LALT);
+      unregister_code(KC_LSFT);
+      unregister_code(KC_R);
+      register_code(KC_RGHT);
+      unregister_code(KC_RGHT);
+    }
+    return false;
+    break;
+    
+  case TEST_LAST:
+    if (record->event.pressed) {
+      register_code(KC_LCTL);
+      register_code(KC_T);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_T);
+      register_code(KC_LCTL);
+      register_code(KC_T);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_T);
+    }
+    return false;
+    break;
+  case TEST_ALL:
+    if (record->event.pressed) {
+      register_code(KC_LCTL);
+      register_code(KC_T);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_T);
+      register_code(KC_LCTL);
+      register_code(KC_L);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_L);
+    }
+    return false;
+    break;
+  case TEST_DEBUG:
+    if (record->event.pressed) {
+      register_code(KC_LCTL);
+      register_code(KC_T);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_T);
+      register_code(KC_LCTL);
+      register_code(KC_D);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_D);
+    }
+    return false;
+    break;
+  case TEST_SESSION:
+    if (record->event.pressed) {
+      register_code(KC_LCTL);
+      register_code(KC_T);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_T);
+      register_code(KC_LCTL);
+      register_code(KC_Y);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_Y);
+    }
+    return false;
+    break;
+  case B_TOGGLE:
+    if (record->event.pressed) {
+      register_code(KC_LCTL);
+      register_code(KC_M);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_M);
+      register_code(KC_LCTL);
+      register_code(KC_K);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_K);
+    }
+    return false;
+    break;
+  case B_PREV:
+    if (record->event.pressed) {
+      register_code(KC_LCTL);
+      register_code(KC_M);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_M);
+      register_code(KC_LCTL);
+      register_code(KC_J);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_J);
+    }
+    return false;
+    break;
+  case B_NEXT:
+    if (record->event.pressed) {
+      register_code(KC_LCTL);
+      register_code(KC_M);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_M);
+      register_code(KC_LCTL);
+      register_code(KC_N);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_N);
+    }
+    return false;
+    break;
+    
     case KG_NEXT:
       if (record->event.pressed) {
         register_code(KC_TAB);
@@ -37,18 +181,6 @@ bool process_my_hotkeys(uint16_t keycode, keyrecord_t *record) {
         register_code(KC_RGHT);
         unregister_code(KC_RGHT);
         unregister_code(KC_LCTRL);
-      }
-      return false;
-      break;
-    case F6_CT_C:
-      if (record->event.pressed) {
-        register_code(KC_F4);
-        unregister_code(KC_F4);
-
-        register_code(KC_LCTL);
-          register_code(KC_C);
-          unregister_code(KC_C);
-        unregister_code(KC_LCTL);
       }
       return false;
       break;
