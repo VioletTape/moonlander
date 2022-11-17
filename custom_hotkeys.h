@@ -17,6 +17,7 @@ enum custom_hotkeys_keycodes {
   CT_Y,
   CT_Z,
   AR_L5,
+  TEST_THIS,
   TEST_LAST,
   TEST_ALL,
   TEST_DEBUG,
@@ -27,6 +28,9 @@ enum custom_hotkeys_keycodes {
   R_PU,
   R_INT,
   SPLIT,
+  SOLEX,
+  GITEX,
+  TG_EXP, 
   
 
   CUSTOM_HOTKEYS_NEW_SAFE_RANGE,
@@ -65,6 +69,44 @@ bool process_my_hotkeys(uint16_t keycode, keyrecord_t *record) {
     return false;
     break;
 
+   case SOLEX:
+    if (record->event.pressed) {
+      register_code(KC_LCTL);
+      register_code(KC_BSLS);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_BSLS);
+      register_code(KC_S);
+      unregister_code(KC_S);
+    }
+    return false;
+    break;
+
+  case GITEX:
+    if (record->event.pressed) {
+      register_code(KC_LCTL);
+      register_code(KC_BSLS);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_BSLS);
+      register_code(KC_G);
+      unregister_code(KC_G);
+    }
+    return false;
+    break;
+
+  case TG_EXP: // toggle expansion
+    if (record->event.pressed) {
+      register_code(KC_LCTL);
+      register_code(KC_M);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_M);
+      register_code(KC_LCTL);
+      register_code(KC_M);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_M);
+    }
+    return false;
+    break;
+
   case SPLIT:
     if (record->event.pressed) {
       register_code(KC_LALT);
@@ -92,6 +134,21 @@ bool process_my_hotkeys(uint16_t keycode, keyrecord_t *record) {
     }
     return false;
     break;
+
+case TEST_THIS:
+    if (record->event.pressed) {
+      register_code(KC_LCTL);
+      register_code(KC_T);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_T);
+      register_code(KC_LCTL);
+      register_code(KC_R);
+      unregister_code(KC_LCTL);
+      unregister_code(KC_R);
+    }
+    return false;
+    break;
+
   case TEST_ALL:
     if (record->event.pressed) {
       register_code(KC_LCTL);

@@ -56,6 +56,7 @@ LAYOUT_moonlander( \
 #define CS_AS LCTL(KC_LSHIFT)
 #define CS_T LCTL(S(KC_T))
 #define CS_ESC LCTL(S(KC_ESC))
+#define CS_BSP LCTL(S(KC_BSPC))
 #define CS_K LCTL(S(KC_K))
 #define CS_M LCTL(S(KC_M))
 #define CS_P LCTL(S(KC_P))
@@ -91,6 +92,7 @@ LAYOUT_moonlander( \
 #define AC_D LALT(LCTL(KC_D))
 #define AC_P LALT(LCTL(KC_P))
 #define AC_F LALT(LCTL(KC_F))
+#define AC_Sh LALT(LCTL(KC_LSFT))
 
 // Ctrl + alt + shift
 #define CAS_F S(AC_F)
@@ -136,6 +138,7 @@ LAYOUT_moonlander( \
 #define CT_F LCTL(KC_F)
 #define CT_A LCTL(KC_A)
 #define CT_L LCTL(KC_L)
+#define CT_F4 LCTL(KC_F4)
 #define CT_F5 LCTL(KC_F5)
 #define CT_F6 LCTL(KC_F6)
 #define CT_F12 LCTL(KC_F12)
@@ -446,12 +449,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [L_RED] = MY_layout(
     // LEFT HALF
     TG_RED,  _______, _______, _______, _______, _______, _______,
-    CT_G,    KC_HOME, KC_PGDN, KC_PGUP, KC_END,  _______, _______,
-    _______, KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT, _______, _______,
+    CT_G,    KC_HOME, KC_PGDN, KC_PGUP, KC_END,  AG_CLPS, _______,
+    _______, KC_LEFT, KC_UP,   KC_DOWN, KC_RGHT, TG_EXP,  _______,
     _______, CT_LEFT, CT_UP,   CT_DOWN, CT_RGHT, _______, 
     _______, _______, _______, _______, TT_CYAN,
     _______, // LEFT RED THUMB KEY
-    KC_LALT, KC_LCTL, _______, // LEFT THUMB KEYS
+    KC_LALT, KC_LCTL, AC_Sh, // LEFT THUMB KEYS
 
     // RIGHT HALF
     _______, _______, _______, _______, _______, _______, _______,
@@ -530,7 +533,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [L_CYAN] = MY_layout(
     // LEFT HALF
     TG_CYAN,  _______, _______, _______,      _______,   _______,  AL_F5,
-    B_PREV,   R_INT,   _______, TEST_SESSION, TEST_LAST, _______,  KC_F9,
+    B_PREV,   R_INT,    CS_BSP, TEST_SESSION, TEST_LAST, TEST_THIS,  KC_F9,
     B_NEXT,   R_PU,    _______, TEST_DEBUG,   CT_RBR,    CT_LBR,   CAS_F9,
     B_TOGGLE, _______, _______, TEST_ALL,     CS_V,      SPLIT,
     _______,  _______, _______, _______,      _______,
@@ -538,7 +541,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, // LEFT THUMB KEYS
 
     // RIGHT HALF
-    _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, SOLEX,   GITEX,   CT_F4,
     _______, _______, _______, _______, _______, _______, KC_F12,
     _______, _______, _______, CT_BSPC, CT_DEL,  _______, SH_F12,
              _______, _______, CS_E,    CS_Y,    _______, _______,
