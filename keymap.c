@@ -182,10 +182,10 @@ LAYOUT_moonlander( \
 #define CMB_CAV CMB_013 // ???
 
 // Russian index keys on letters
-#define CMS_R CMB_014
-#define CMS_SH CMB_015
-#define CMS_S_R CMB_016
-#define CMS_SSH CMB_017
+#define CMS_Z CMB_014
+#define CMS_L CMB_015
+#define CMS_S_Z CMB_016
+#define CMS_S_L CMB_017
 
 // Left number-row
 #define CMB_PLS CMB_018
@@ -373,56 +373,56 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 
   //---------------------------------------------------------------------------
-  LANG_TWO_LAYERS(
-    L_RU, L_RU_S,
-
-    /* Left hand */
-             RU_J,    RU_TS,   RU_U,    RU_K,   RU_JE,
-             RU_F,   RU_M,    RU_V,    RU_A,    RU_P,
-    AG_RPRN, RU_JA,   RU_CH,   RU_S,    RU_I,    RU_Y,
-
-    /* Right hand */
-    RU_SC,   RU_Z,    RU_T,    RU_N,    RU_G,
-    CMS_R,   RU_O,    RU_L,    RU_D,    RU_ZH,   RU_E,
-    CMS_SH,  RU_SF,   RU_B,    RU_JU,   RU_H,    RU_JO,
-
-    /* ---------------------------- Shift layer ---------------------------- */
-    /* Left hand */
-             RU_S_J,  RU_S_TS, RU_S_U,  RU_S_K, RU_S_JE,
-             RU_S_F,  RU_S_M,  RU_S_V,  RU_S_A,  RU_S_P,
-    _______, RU_S_JA, RU_S_CH, RU_S_S,  RU_S_I,  RU_S_Y,
-
-    /* Right hand */
-    RU_S_SC, RU_S_Z,  RU_S_T,  RU_S_N,  RU_S_G,
-    CMS_S_R, RU_S_O,  RU_S_L,  RU_S_D,  RU_S_ZH, RU_S_E,
-    CMS_SSH, RU_S_SF, RU_S_B,  RU_S_JU, RU_S_H,  RU_S_JO
-  )
+  // LANG_TWO_LAYERS(
+  //   L_RU, L_RU_S,
+  //
+  //   /* Left hand */
+  //            RU_J,    RU_TS,   RU_U,    RU_K,   RU_JE,
+  //            RU_F,   RU_M,    RU_V,    RU_A,    RU_P,
+  //   AG_RPRN, RU_JA,   RU_CH,   RU_S,    RU_I,    RU_Y,
+  //
+  //   /* Right hand */
+  //   RU_SC,   RU_Z,    RU_T,    RU_N,    RU_G,
+  //   CMS_R,   RU_O,    RU_L,    RU_D,    RU_ZH,   RU_E,
+  //   CMS_SH,  RU_SF,   RU_B,    RU_JU,   RU_H,    RU_JO,
+  //
+  //   /* ---------------------------- Shift layer ---------------------------- */
+  //   /* Left hand */
+  //            RU_S_J,  RU_S_TS, RU_S_U,  RU_S_K, RU_S_JE,
+  //            RU_S_F,  RU_S_M,  RU_S_V,  RU_S_A,  RU_S_P,
+  //   _______, RU_S_JA, RU_S_CH, RU_S_S,  RU_S_I,  RU_S_Y,
+  //
+  //   /* Right hand */
+  //   RU_S_SC, RU_S_Z,  RU_S_T,  RU_S_N,  RU_S_G,
+  //   CMS_S_R, RU_S_O,  RU_S_L,  RU_S_D,  RU_S_ZH, RU_S_E,
+  //   CMS_SSH, RU_S_SF, RU_S_B,  RU_S_JU, RU_S_H,  RU_S_JO
+  // )
 
   //---------------------------------------------------------------------------
-  //  LANG_TWO_LAYERS(
-  //    L_RU_D, L_RU_SD,
-  //
-  //    /* Left hand */
-  //             RU_TS,  RU_SF,   RU_JA,   RU_JU,   RU_JO,
-  //             RU_U,   RU_I,    RU_JE,    RU_O,    RU_A,
-  //    AG_RPRN, RU_F,  RU_E,   RU_U,    RU_Y,    RU_SC,
-  //
-  //    /* Right hand */
-  //    RU_Z,   RU_V,    RU_K,    RU_D,    RU_SH,
-  //    RU_L,   RU_N,    RU_T,    RU_S,    RU_R,   RU_J,
-  //    RU_B,   RU_M,    RU_P,    RU_G,    RU_ZH,  RU_CH,
-  //
-  //    /* ---------------------------- Shift layer ---------------------------- */
-  //    /* Left hand */
-  //             RU_S_TS,  RU_S_SF,   RU_S_JA,   RU_S_JU,   RU_S_JO,
-  //             RU_S_U,   RU_S_I,    RU_S_JE,   RU_S_O,    RU_S_A,
-  //    _______, RU_S_F,   RU_S_E,    RU_S_U,    RU_S_Y,    RU_S_SC,
-  //
-  //    /* Right hand */
-  //    RU_S_Z,   RU_S_V,    RU_S_K,    RU_S_D,    RU_S_SH,
-  //    RU_S_L,   RU_S_N,    RU_S_T,    RU_S_S,    RU_S_R,   RU_S_J,
-  //    RU_S_B,   RU_S_M,    RU_S_P,    RU_S_G,    RU_S_ZH,  RU_S_CH,
-  //  )
+  LANG_TWO_LAYERS(
+    L_RU, L_RU_S,
+  
+    /* Left hand */
+             RU_SC,  RU_SF,   RU_JA,   RU_JU,   RU_SH,
+             RU_U,   RU_I,    RU_JE,   RU_O,    RU_A,
+    RU_JO,   RU_F,   RU_E,    RU_CH,   RU_Y,    RU_TS,
+  
+    /* Right hand */
+    CMS_Z,   RU_V,    RU_K,    RU_D,    RU_CH,
+    CMS_L,   RU_N,    RU_T,    RU_S,    RU_R,   RU_J,
+    RU_B,   RU_M,    RU_P,    RU_G,    RU_ZH,  _______,
+  
+    /* ---------------------------- Shift layer ---------------------------- */
+    /* Left hand */
+             RU_S_SC,  RU_S_SF,   RU_S_JA,   RU_S_JU,   RU_S_SH,
+             RU_S_U,   RU_S_I,    RU_S_JE,   RU_S_O,    RU_S_A,
+    RU_S_JO, RU_S_F,   RU_S_E,    RU_S_CH,   RU_S_Y,    RU_S_TS,
+  
+    /* Right hand */
+    CMS_S_Z,   RU_S_V,    RU_S_K,    RU_S_D,    RU_S_CH,
+    CMS_S_L,   RU_S_N,    RU_S_T,    RU_S_S,    RU_S_R,   RU_S_J,
+    RU_S_B,   RU_S_M,    RU_S_P,    RU_S_G,    RU_S_ZH,  _______
+  )
 
 
   [L_DIC] = MY_layout(
@@ -590,7 +590,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, XXXXXXX,
                       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                       XXXXXXX, // RIGHT RED THUMB KEY
-                      XXXXXXX, XXXXXXX, XXXXXXX // RIGHT THUMB KEYS
+                      XXXXXXX, XXXXXXX, WN_SCRN // RIGHT THUMB KEYS
     ),
 
   //---------------------------------------------------------------------------
@@ -665,12 +665,13 @@ const ComboWithKeycode combos[] PROGMEM = {
 
   // -------------------------------------------------------------------------
   // Russian combos on letters
-  CHORD(RU_R,    /* <- */ CMS_R),
-  CHORD(RU_SH,   /* <- */ CMS_SH),
-  CHORD(RU_HD,   /* <- */ CMS_R, CMS_SH),
-  CHORD(RU_S_R,  /* <- */ CMS_S_R),
-  CHORD(RU_S_SH, /* <- */ CMS_SSH),
-  CHORD(RU_S_HD, /* <- */ CMS_S_R, CMS_SSH),
+  //   что                как
+  CHORD(RU_Z,    /* <- */ CMS_Z),
+  CHORD(RU_L,   /* <- */ CMS_L),
+  CHORD(RU_HD,   /* <- */ CMS_Z, CMS_L),
+  CHORD(RU_S_Z,  /* <- */ CMS_S_Z),
+  CHORD(RU_S_L, /* <- */ CMS_S_L),
+  CHORD(RU_S_HD, /* <- */ CMS_S_Z, CMS_S_L),
 
   // -------------------------------------------------------------------------
   // Number row
