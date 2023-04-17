@@ -416,7 +416,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Left hand */
              RU_S_SC,  RU_S_SF,   RU_S_JA,   RU_S_JU,   RU_S_SH,
              RU_S_U,   RU_S_I,    RU_S_JE,   RU_S_O,    RU_S_A,
-    RU_S_JO, RU_S_F,   RU_S_E,    RU_S_CH,   RU_S_Y,    RU_S_TS,
+    RU_S_JO, RU_S_F,   RU_S_E,    RU_S_H,   RU_S_Y,    RU_S_TS,
   
     /* Right hand */
     CMS_S_Z,   RU_S_V,    RU_S_K,    RU_S_D,    RU_S_CH,
@@ -430,7 +430,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     TG_DIC,  _______, _______, _______, _______, _______, _______,
     _______, RU_F,   RU_SF,   RU_JA,    RU_JU,   RU_SC,   _______,
     _______, RU_U,   RU_I,    RU_JE,    RU_O,    RU_A,    _______,
-    _______, RU_JO,  RU_E,    RU_CH,    RU_Y,    RU_TS,
+    _______, RU_JO,  RU_E,    RU_H,    RU_Y,    RU_TS,
     _______, _______, _______, _______, _______,
     _______, // LEFT RED THUMB KEY
     _______, _______, _______, // LEFT THUMB KEYS
@@ -579,7 +579,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_F2,
     KC_LSFT, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_F7,
     KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_SPC,
+    XXXXXXX, XXXXXXX, XXXXXXX, KC_LCTL, KC_SPC,
     KC_LGUI, // LEFT RED THUMB KEY
     KC_SPC,  KC_LALT, KC_ENT, // LEFT THUMB KEYS
 
