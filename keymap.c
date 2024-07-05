@@ -405,7 +405,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Left hand */
              RU_SC,  RU_SF,   RU_JA,   RU_JU,   RU_SH,
              RU_U,   RU_I,    RU_JE,   RU_O,    RU_A,
-    RU_JO,   RU_F,   RU_E,    RU_CH,   RU_Y,    RU_TS,
+    RU_JO,   RU_F,   RU_E,    RU_H,   RU_Y,    RU_TS,
   
     /* Right hand */
     CMS_Z,   RU_V,    RU_K,    RU_D,    RU_CH,

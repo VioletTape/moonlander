@@ -451,7 +451,7 @@ bool lang_shift_process_custom_keycodes(Key key, keyrecord_t* record) {
       shift_once_process_key(lang_get_shift_layer_number(), down);
       return false;
     case SFT_N:
-      if (down) {
+      if (down) { 
         shift_activate_from_user(true);
         lang_shift_current_shift_layer = lang_get_shift_layer_number();
         layer_on(lang_shift_current_shift_layer);
