@@ -317,7 +317,7 @@ enum Layers {
     CMB_RB4, CMB_EQL, CMB_CLN, CMB_CMM, CMB_QUE, CMB_SLS, CT_Z, \
     CMB_LB3,    RU1,     RU2,     RU3,     RU4,     RU5,     AG_MINS, \
     CMB_LB1,    RH1,     RH2,     RH3,     RH4,     RH5,     RH6, \
-             RD1,     RD2,     RD3,     RD4,     RD5,     RD6, \
+                RD1,     RD2,     RD3,     RD4,     RD5,     RD6, \
                       TT_RED,  TT_CYAN, XXXXXXX, TT_GAME, TT_NUCL, \
                       \
                       CMB_ALT, /* RIGHT RED THUMB KEY */ \
@@ -337,7 +337,7 @@ enum Layers {
     \
     /* RIGHT HALF */ \
     _______, _______, AG2COLN, AG_COMM, _______, AG2SLSH, CT_Y, \
-    _______, SRU1,    SRU2,    SRU3,    SRU4,    SRU5,    _______, \
+    _______, SRU1,    SRU2,    SRU3,    SRU4,    SRU5,    CST_DASH, \
     _______, SRH1,    SRH2,    SRH3,    SRH4,    SRH5,    SRH6, \
              SRD1,    SRD2,    SRD3,    SRD4,    SRD5,    SRD6, \
                       _______, _______, _______, _______, _______, \
@@ -522,7 +522,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // RIGHT HALF
     _______, _______, _______, _______, _______, _______, KC_SLEP,
     _______, _______, _______, _______, _______, _______, _______,
-    _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, XC_CRSS, XC_DONE, _______, _______, _______,
              _______, _______, _______, _______, _______, _______,
                       _______, _______, _______, _______, KC_PWR,
                       _______, // RIGHT RED THUMB KEY

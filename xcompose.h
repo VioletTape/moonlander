@@ -134,11 +134,18 @@ bool process_my_xcompose(uint16_t keycode, keyrecord_t *record) {
     XC_PROCESS(XC_COPY, 3, 1) // ©
 
     // Emojis
-    XC_PROCESS(XC_CRSS, 3, 2) // ❌
+    XC_PROCESS(XC_CRSS, 3, 2) // ❌ 
     XC_PROCESS(XC_DONE, 3, 3) // ✅
     XC_PROCESS(XC_SPRK, 3, 4) // ✨
     XC_PROCESS(XC_TMBU, 3, 5) // 👍
     XC_PROCESS(XC_TMBD, 3, 6) // 👎
   }
+
+#undef PRESS
+#undef COMPOSE
+#undef CASE_PROCESS
+#undef XC_PROCESS
+#undef TO_NUM
+
   return true;
 }

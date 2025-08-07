@@ -31,6 +31,10 @@ enum custom_hotkeys_keycodes {
   SOLEX,
   GITEX,
   TG_EXP, 
+  CST_DASH, 
+  CST_PARA, 
+CST_PARA1, 
+CST_LARR, 
   
 
   CUSTOM_HOTKEYS_NEW_SAFE_RANGE,
@@ -353,6 +357,65 @@ case TEST_THIS:
         unregister_code(KC_LEFT);
         register_code(KC_LEFT);
         unregister_code(KC_LEFT);
+      }
+      return false;
+    case CST_DASH:
+      if (record->event.pressed) {
+        register_code(KC_RALT);
+        
+        register_code(KC_P0);
+        unregister_code(KC_P0);
+        register_code(KC_P1);
+        unregister_code(KC_P1);
+        register_code(KC_P5);
+        unregister_code(KC_P5);
+        register_code(KC_P0);
+        unregister_code(KC_P0);
+
+        unregister_code(KC_RALT);
+      }
+      return false;
+
+    case CST_PARA:
+      if (record->event.pressed) {
+        register_code(KC_RALT);
+        
+        register_code(KC_P0);
+        unregister_code(KC_P0);
+        register_code(KC_P1);
+        unregister_code(KC_P1);
+        register_code(KC_P6);
+        unregister_code(KC_P6);
+        register_code(KC_P7);
+        unregister_code(KC_P7);
+
+        unregister_code(KC_RALT);
+      }
+      return false;
+
+     case CST_PARA1:
+      if (record->event.pressed) {
+        register_code(KC_RALT);
+        
+        register_code(KC_P2);
+        unregister_code(KC_P2);
+        register_code(KC_P1);
+        unregister_code(KC_P1);
+
+        unregister_code(KC_RALT);
+      }
+      return false;
+
+case CST_LARR:
+      if (record->event.pressed) {
+        register_code(KC_RALT);
+        
+        register_code(KC_P1);
+        unregister_code(KC_P1);
+        register_code(KC_P6);
+        unregister_code(KC_P6);
+
+        unregister_code(KC_RALT);
       }
       return false;
   }
