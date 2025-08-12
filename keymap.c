@@ -510,9 +510,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   //---------------------------------------------------------------------------
   [L_GRAY] = MY_layout(
-    // LEFT HALF
-    TG_GRAY, _______, _______, _______, _______, _______,  _______,
-    _______, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, _______,  _______,
+    // LEFT HALF 
+    TG_GRAY, XC_PLMN, _______, _______, _______, XC_TIMS,  XC_PARA,
+    _______, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, _______,  XC_NUMB,
     KC_BTN1, RP_001,  RP_003,  RP_002,  RP_004,  KC_BTN2,  _______,
     _______, RP_005,  RP_007,  RP_006,  RP_008,  KC_BTN3,
     _______, _______, _______, _______, _______,
@@ -520,10 +520,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, // LEFT THUMB KEYS
 
     // RIGHT HALF
-    _______, _______, _______, _______, _______, _______, KC_SLEP,
-    _______, _______, _______, _______, _______, _______, _______,
-    _______, _______, XC_CRSS, XC_DONE, _______, _______, _______,
-             _______, _______, _______, _______, _______, _______,
+    _______, XC_CRSS, _______, _______, _______, XC_DIVS, KC_SLEP,
+    _______, XC_DONE, XC_SPRK, _______, _______, _______, _______,
+    _______, XC_TMBU, XC_LEFT, XC_DOWN, XC_UP,   XC_RGHT, XC_DASH,
+             XC_TMBD, XC_FLEFT, XC_FDOWN, XC_FUP, XC_FRGHT, _______,
                       _______, _______, _______, _______, KC_PWR,
                       _______, // RIGHT RED THUMB KEY
                       _______, _______, _______ // RIGHT THUMB KEYS

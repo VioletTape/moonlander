@@ -78,6 +78,16 @@ include "%L"
 # Emojis
 <Multi_key> <3> <2> <9>             : "❌"
 <Multi_key> <3> <3> <9>             : "✅"
-<Multi_key> <3> <4> <9>             : "✨"
+<Multi_key> <3> <4> <9>             : "⭐"
 <Multi_key> <3> <5> <9>             : "👍"
 <Multi_key> <3> <6> <9>             : "👎"
+
+# Arrows 2
+<Multi_key> <3> <7> <9>             : "◀"
+<Multi_key> <3> <8> <9>             : "▼"
+<Multi_key> <3> <9> <9>             : "▲"
+<Multi_key> <4> <0> <9>             : "▶"
+
+<Multi_key> <4> <1> <9>             : "§"
+<Multi_key> <4> <2> <9>             : "№"
+<Multi_key> <4> <3> <9>             : "÷"

@@ -45,6 +45,10 @@ enum custom_xcompose_keycodes {
   XC_DOWN, // ↓
   XC_UP,   // ↑
   XC_RGHT, // →
+  XC_FLEFT, // ◀
+  XC_FDOWN, // ▼
+  XC_FUP,   // ▲
+  XC_FRGHT, // ▶
 
   // Other symbols
   XC_LTRE, // «
@@ -62,9 +66,13 @@ enum custom_xcompose_keycodes {
   // Emojis
   XC_CRSS, // ❌
   XC_DONE, // ✅
-  XC_SPRK, // ✨
+  XC_SPRK, // ⭐
   XC_TMBU, // 👍
   XC_TMBD, // 👎
+
+  XC_PARA, // §
+  XC_NUMB, // №
+  XC_DIVS, // ÷
 
   CUSTOM_XCOMPOSE_NEW_SAFE_RANGE,
   #undef CUSTOM_SAFE_RANGE
@@ -139,6 +147,17 @@ bool process_my_xcompose(uint16_t keycode, keyrecord_t *record) {
     XC_PROCESS(XC_SPRK, 3, 4) // ✨
     XC_PROCESS(XC_TMBU, 3, 5) // 👍
     XC_PROCESS(XC_TMBD, 3, 6) // 👎
+
+    // Arrows 2
+    XC_PROCESS(XC_FLEFT, 3, 7) // ◀
+    XC_PROCESS(XC_FDOWN, 3, 8) // ↓
+    XC_PROCESS(XC_FUP, 3, 9)   // ↑
+    XC_PROCESS(XC_FRGHT, 4, 0) // →
+
+    // Special 1
+    XC_PROCESS(XC_PARA, 4, 1) // §
+    XC_PROCESS(XC_NUMB, 4, 2) // №
+    XC_PROCESS(XC_DIVS, 4, 3) // ÷
   }
 
 #undef PRESS
