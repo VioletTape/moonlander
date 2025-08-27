@@ -46,28 +46,28 @@ bool process_my_hotkeys(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
   case R_PU:
     if (record->event.pressed) {
-      register_code(KC_LALT);
+      register_code(KC_LCTL);
       register_code(KC_LSFT);
       register_code(KC_R);
-      unregister_code(KC_LALT);
+      unregister_code(KC_LCTL);
       unregister_code(KC_LSFT);
       unregister_code(KC_R);
-      register_code(KC_U);
-      unregister_code(KC_U);
+      register_code(KC_B);
+      unregister_code(KC_B);
     }
     return false;
     break;
 
   case R_INT:
     if (record->event.pressed) {
-      register_code(KC_LALT);
+      register_code(KC_LCTL);
       register_code(KC_LSFT);
       register_code(KC_R);
-      unregister_code(KC_LALT);
+      unregister_code(KC_LCTL);
       unregister_code(KC_LSFT);
       unregister_code(KC_R);
-      register_code(KC_I);
-      unregister_code(KC_I);
+      register_code(KC_X);
+      unregister_code(KC_X);
     }
     return false;
     break;
@@ -375,22 +375,7 @@ case TEST_THIS:
       }
       return false;
 
-    case CST_PARA:
-      if (record->event.pressed) {
-        register_code(KC_RALT);
-        
-        register_code(KC_P0);
-        unregister_code(KC_P0);
-        register_code(KC_P1);
-        unregister_code(KC_P1);
-        register_code(KC_P6);
-        unregister_code(KC_P6);
-        register_code(KC_P7);
-        unregister_code(KC_P7);
-
-        unregister_code(KC_RALT);
-      }
-      return false;
+   
   }
 
   return true;
