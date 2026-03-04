@@ -145,9 +145,13 @@ Key shift_process(Key key, bool down) {
 
 	if (new_shift != NONE_SHIFT) {
 		if (down) {
-			shift_pressed_count++;
+			if (shift_pressed_count < 255) {
+				shift_pressed_count++;
+			}
 		} else {
-			shift_pressed_count--;
+			if (shift_pressed_count > 0) {
+				shift_pressed_count--;
+			}
 		}
 	}
 
@@ -398,9 +402,13 @@ Key lang_process(Key key, bool down) {
 
   if (new_lang != NONE_LANG) {
     if (down) {
-      lang_pressed_count++;
+      if (lang_pressed_count < 255) {
+        lang_pressed_count++;
+      }
     } else {
-      lang_pressed_count--;
+      if (lang_pressed_count > 0) {
+        lang_pressed_count--;
+      }
     }
   }
 

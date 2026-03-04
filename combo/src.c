@@ -96,18 +96,31 @@ bool combo_has_prefix(Combo *combo, ComboKey another_key) {
 }
 
 uint16_t combo_get_keycode(ComboPos pos) {
+  if (eq_combo_pos(pos, NONE_COMBO_POS)) {
+    return 0;
+  }
   return pgm_read_word(&(combos[pos.repr].keycode));
 }
 
 uint16_t combo_get_undo(ComboPos elem_index) {
+  if (eq_combo_pos(elem_index, NONE_COMBO_POS)) {
+    return 0;
+  }
   return pgm_read_word(&(combos[elem_index.repr].undo_keycode));
 }
 
 bool combo_is_immediate(ComboPos elem_index) {
+  if (eq_combo_pos(elem_index, NONE_COMBO_POS)) {
+    return false;
+  }
   return combo_get_undo(elem_index) != 0;
 }
 
 void combo_press(ComboPos pos, bool down) {
+  if (eq_combo_pos(pos, NONE_COMBO_POS)) {
+    return;
+  }
+
   #ifdef COMBO_DEBUG
   uprintf("combo press pos: %d %s\n", pos, down ? "down" : "up");
   #endif
@@ -118,6 +131,10 @@ void combo_press(ComboPos pos, bool down) {
 }
 
 void combo_press_undo(ComboPos pos) {
+  if (eq_combo_pos(pos, NONE_COMBO_POS)) {
+    return;
+  }
+
   #ifdef COMBO_DEBUG
   uprintf("combo press undo up: %d\n", pos);
   #endif
